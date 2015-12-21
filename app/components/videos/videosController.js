@@ -1,18 +1,17 @@
 var React = require('react');
 
-var videoActions = require("../../actions/videoActions");
+var VideoPlayer = require("./videoPlayer");
+var VideoButtons = require("./videoButtons");
 
 var VideosController = React.createClass({
-  makeItHappen: function() {
-    videoActions.showVideo("some value");
-  },
-
   render: function() {
     return (
-      <p onClick={this.makeItHappen}>videos go here</p>
+      <div>
+        <VideoPlayer/>
+        <VideoButtons/>
+      </div>
     );
   }
-  
 });
   
 module.exports = VideosController;

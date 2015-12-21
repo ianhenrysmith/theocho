@@ -4,10 +4,9 @@ var dispatcher = require("../dispatcher");
 var constants = require("../constants");
 
 var actions = {
-  showVideo: function(value) {
+  changeVideo: function() {
     dispatcher.handleAction({
-      actionType: constants.SOMETHING_HAPPENED,
-      data: value
+      actionType: constants.VIDEO_CHANGED
     });
   }
 }
